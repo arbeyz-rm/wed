@@ -75,6 +75,7 @@
   h2 + .sub { color: var(--texto-suave); margin: 0 0 28px; }
   h3 { margin: 0 0 6px; font-size: 18px; }
   .rejilla { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  @media (min-width: 900px) { .rejilla.tres { grid-template-columns: repeat(3, 1fr); } }
   .tarjeta { background: var(--tarjeta); border: 2px solid #2c2c2c; border-radius: 14px; padding: 20px; }
   .tarjeta .icono { font-size: 26px; margin-bottom: 6px; }
   .tarjeta p { margin: 0; color: var(--texto-suave); }
@@ -111,8 +112,12 @@
   .persona strong { display: block; }
   .persona span { color: var(--texto-suave); font-size: 14px; }
 
+  .personaje { text-align: center; }
+  .personaje img { height: 230px; width: auto; margin: 0 auto 12px; object-fit: contain; filter: drop-shadow(4px 6px 0 #00000066); }
+
   footer { background: var(--tinta); border-top: 3px solid var(--rojo); padding: 28px 0; color: var(--texto-suave); font-size: 14px; }
   footer .contenedor { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  footer .creditos { flex-basis: 100%; font-size: 12px; color: #8a8a8a; }
 
   @media (max-width: 760px) {
     .hero .contenedor { grid-template-columns: 1fr; }
@@ -134,6 +139,8 @@
     <ul>
       <li><a href="#problema">El problema</a></li>
       <li><a href="#juego">El juego</a></li>
+      <li><a href="#personajes">Personajes</a></li>
+      <li><a href="#finales">Finales</a></li>
       <li><a href="#capturas">Capturas</a></li>
       <li><a href="#controles">Controles</a></li>
       <li><a href="#tecnico">Cómo está hecho</a></li>
@@ -188,17 +195,42 @@
     <h2>El juego</h2>
     <p class="sub">Un videojuego serio: el mensaje no se lee en una pregunta, se vive peleando.</p>
     <div class="pasos">
-      <div class="paso"><h3>Prende el teléfono</h3><p>Una historia corta te presenta: un creador novato con ganas de hacerse viral.</p></div>
-      <div class="paso"><h3>Crea tu canal</h3><p>Elige nombre y foto en NeTube y configura cada transmisión: título, filtro y dificultad.</p></div>
-      <div class="paso"><h3>Pelea en vivo</h3><p>Defiéndete, esquiva e interrumpe los ataques del rival mientras el chat reacciona a cada golpe.</p></div>
-      <div class="paso"><h3>Hazte viral</h3><p>Cada victoria suma visitas y suscriptores. Los rivales se vuelven más fuertes.</p></div>
-      <div class="paso"><h3>Enfrenta al Algoritmo</h3><p>El jefe final es invencible. La derrota es la lección: saber cuándo apagar la cámara.</p></div>
+      <div class="paso"><h3>Prende el teléfono</h3><p>El gallo te presenta: un creador novato con ganas de hacerse viral a cualquier costo.</p></div>
+      <div class="paso"><h3>Escucha a la ninfa</h3><p>Una amiga te pide no pelear por visitas. <b>Tú decides</b>: hacerle caso o seguir con tu plan.</p></div>
+      <div class="paso"><h3>Crea tu canal</h3><p>Nombre y foto en NeTube, con una vista previa de tu canal. Luego eliges título, filtro y dificultad.</p></div>
+      <div class="paso"><h3>Pelea en vivo</h3><p>Calienta contra el árbol del tutorial y enfrenta rivales cada vez más fuertes mientras el chat reacciona.</p></div>
+      <div class="paso"><h3>Enfrenta al Algoritmo</h3><p>El jefe final es invencible. Despiertas en el hospital y la ninfa te da la lección.</p></div>
     </div>
-    <div class="rejilla" style="margin-top:22px">
+    <div class="rejilla tres" style="margin-top:22px">
       <div class="tarjeta"><div class="icono" aria-hidden="true">🎲</div><h3>Componente aleatorio</h3><p>El rival decide cada acción con un dado: golpe, golpe fuerte, patada, bloqueo o burla. El lado de la patada y el chat también son aleatorios.</p></div>
-      <div class="tarjeta"><div class="icono" aria-hidden="true">🥊</div><h3>Habilidad</h3><p>Lee el aviso del rival y reacciona a tiempo. Si abusas de la guardia, se rompe y quedas tres segundos sin defensa.</p></div>
+      <div class="tarjeta"><div class="icono" aria-hidden="true">🥊</div><h3>Habilidad</h3><p>Lee el aviso del rival y reacciona a tiempo. Cada golpe tiene recarga, la guardia se rompe si abusas de ella y, si golpeas sin parar, el rival <b>contraataca</b>.</p></div>
+      <div class="tarjeta"><div class="icono" aria-hidden="true">🔥</div><h3>Modo furia</h3><p>Cuando al rival le queda la mitad de vida se enoja: se pone rojo, ataca más rápido, de forma más impredecible y pega más fuerte. Su barra de vida te avisa.</p></div>
       <div class="tarjeta"><div class="icono" aria-hidden="true">👁️</div><h3>Inclusivo</h3><p>Filtros para protanopia, deuteranopia y tritanopia, control por cámara o por teclado, tres dificultades y avisos visuales y sonoros.</p></div>
-      <div class="tarjeta"><div class="icono" aria-hidden="true">💬</div><h3>Motivador</h3><p>Chat en vivo que reacciona, hitos de audiencia, donaciones, música, efectos de sonido y récords por nivel.</p></div>
+      <div class="tarjeta"><div class="icono" aria-hidden="true">💬</div><h3>Motivador</h3><p>Chat en vivo que reacciona, hitos de audiencia, donaciones, música en cada escena, efectos de K.O. y récords por nivel.</p></div>
+      <div class="tarjeta"><div class="icono" aria-hidden="true">🔀</div><h3>Tus decisiones importan</h3><p>Al inicio eliges si le haces caso a la ninfa. Hay dos finales distintos y, al terminar, puedes volver al menú y jugar de nuevo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="personajes">
+  <div class="contenedor">
+    <h2>Personajes</h2>
+    <p class="sub">Los protagonistas de la historia.</p>
+    <div class="rejilla">
+      <div class="tarjeta personaje"><img src="img/personaje_gallo.png" alt="El gallo: creador de contenido con cabeza de gallo, camiseta blanca y vendas en las manos" loading="lazy"><h3>El gallo</h3><p>Tú: un creador de contenido novato dispuesto a todo por hacerse viral en NeTube.</p></div>
+      <div class="tarjeta personaje"><img src="img/personaje_ninfa.png" alt="La ninfa: chica con cabeza de ninfa amarilla, mejillas naranjas, suéter lila y falda" loading="lazy"><h3>La ninfa</h3><p>Tu amiga. Te pide que no pongas en riesgo tu salud por unas visitas, y está ahí al final.</p></div>
+      <div class="tarjeta personaje"><img src="img/personaje_arbol.png" alt="El árbol de entrenamiento con cara, vincha roja y guantes de boxeo" loading="lazy"><h3>El árbol</h3><p>Tu compañero de entrenamiento en el tutorial. Con guantes y vincha, aguanta tus primeros golpes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="finales">
+  <div class="contenedor">
+    <h2>Dos finales</h2>
+    <p class="sub">Tu primera decisión cambia toda la historia.</p>
+    <div class="galeria">
+      <figure><img src="img/final_periodico.jpg" alt="Un periódico, El Diario Viral, con el titular: creador de contenido termina en el hospital por grabar sus propias peleas" loading="lazy"><figcaption><b>Le haces caso a la ninfa.</b> El Diario Viral muestra cómo pudo terminar tu historia, y no prendes la cámara.</figcaption></figure>
+      <figure><img src="img/final_hospital.jpg" alt="Habitación de hospital en primera persona, con la ninfa junto a la cama hablándote" loading="lazy"><figcaption><b>Sigues con tu plan.</b> Peleas hasta caer ante El Algoritmo y despiertas en el hospital junto a la ninfa.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -209,10 +241,13 @@
     <p class="sub">Imágenes del juego en ejecución.</p>
     <div class="galeria">
       <figure><img src="img/01_menu.jpg" alt="Menú principal con los botones Jugar, Instrucciones, Créditos y Salir" loading="lazy"><figcaption>Menú principal</figcaption></figure>
-      <figure><img src="img/07_pelea.jpg" alt="Pelea en vivo: el rival al centro, los puños del jugador abajo, la batería de vida y el chat del directo" loading="lazy"><figcaption>Pelea en vivo con chat que reacciona</figcaption></figure>
-      <figure><img src="img/05_panel_canal.jpg" alt="Panel para configurar la transmisión: título, filtro de cámara y dificultad" loading="lazy"><figcaption>Configuración de cada transmisión</figcaption></figure>
-      <figure><img src="img/06_ayuda_controles.jpg" alt="Ventana de ayuda Cómo se juega con los controles de cámara y teclado" loading="lazy"><figcaption>Herramienta de ayuda integrada</figcaption></figure>
-      <figure><img src="img/04_netube.jpg" alt="Pantalla de NeTube para crear el canal con nombre y foto de perfil" loading="lazy"><figcaption>Creación del canal en NeTube</figcaption></figure>
+      <figure><img src="img/intro_ninfa.jpg" alt="El gallo y la ninfa en la introducción, con los botones Hacerle caso y Seguir con mi plan" loading="lazy"><figcaption>La elección: hacerle caso o seguir con tu plan</figcaption></figure>
+      <figure><img src="img/netube.jpg" alt="Pantalla Crea tu canal en NeTube con el formulario y la vista previa del canal" loading="lazy"><figcaption>Crea tu canal con vista previa en vivo</figcaption></figure>
+      <figure><img src="img/panel_canal.jpg" alt="Panel para configurar la transmisión: título, filtro de cámara y dificultad" loading="lazy"><figcaption>Configuración de cada transmisión</figcaption></figure>
+      <figure><img src="img/tutorial_arbol.jpg" alt="Tutorial contra el árbol de entrenamiento con guantes de boxeo" loading="lazy"><figcaption>Tutorial contra el árbol de entrenamiento</figcaption></figure>
+      <figure><img src="img/pelea.jpg" alt="Pelea en vivo con la barra de vida del rival arriba, la batería del jugador y el chat del directo" loading="lazy"><figcaption>Pelea en vivo con barra de vida y chat</figcaption></figure>
+      <figure><img src="img/pelea_furia.jpg" alt="El rival en rojo, en modo furia, con la barra de vida naranja" loading="lazy"><figcaption>Modo furia: el rival se enoja</figcaption></figure>
+      <figure><img src="img/ayuda.jpg" alt="Ventana de ayuda Cómo se juega con los controles de cámara y teclado" loading="lazy"><figcaption>Herramienta de ayuda integrada</figcaption></figure>
       <figure><img src="img/comparacion_filtros.jpg" alt="La misma escena con cuatro filtros: normal, protanopia, deuteranopia y tritanopia" loading="lazy"><figcaption>Filtros de daltonismo</figcaption></figure>
     </div>
   </div>
@@ -261,8 +296,8 @@
       </div>
       <div class="tarjeta">
         <h3>Calidad</h3>
-        <p>Más de 30 clases propias, principios SOLID y 32 pruebas automatizadas superadas. Prueba de usabilidad con usuarios.</p>
-        <div class="chips"><span class="chip">SOLID</span><span class="chip">32/32 pruebas</span></div>
+        <p>Más de 30 clases propias, principios SOLID y 108 verificaciones automatizadas superadas (estructuras, combate, escenas y finales). Prueba de usabilidad con usuarios.</p>
+        <div class="chips"><span class="chip">SOLID</span><span class="chip">108/108 verificaciones</span></div>
       </div>
     </div>
   </div>
@@ -291,7 +326,7 @@
     </div>
     <div class="tarjeta" style="margin-top:18px">
       <h3>Dirigido por</h3>
-      <p> Margarita Gamarra · Daniel Romero Martínez · Eduardo Angulo Madrid</p>
+      <p>Margarita Gamarra · Daniel Romero Martínez · Eduardo Angulo Madrid</p>
     </div>
   </div>
 </section>
@@ -301,7 +336,13 @@
   <div class="contenedor">
     <span>PeleaViral · VI Feria Gamer · Universidad del Norte · 2026</span>
     <span>«La verdadera victoria es saber cuándo apagar la cámara.»</span>
+    <span class="creditos">Música: <i>Main Menu</i> (Super Smash Flash 2, McLeodGaming) · <i>It's Safe Now</i> (Hotline Miami, Scattle) · <i>Jungle Theme</i> (Contra, Konami). Usadas sin fines comerciales; todos los derechos son de sus autores.</span>
   </div>
+</footer>
+
+</body>
+</html>
+
 </footer>
 
 </body>
