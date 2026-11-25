@@ -93,6 +93,9 @@
   figure { margin: 0; background: var(--tarjeta); border-radius: 14px; overflow: hidden; border: 2px solid #2c2c2c; }
   figure img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; }
   figcaption { padding: 10px 14px; color: var(--texto-suave); font-size: 14px; }
+  .titulo-guia { margin: 36px 0 6px; font-size: 22px; }
+  figure.guia { max-width: 900px; margin: 14px auto 0; }
+  figure.guia img { aspect-ratio: auto; object-fit: contain; }
 
   /* --- Controles --- */
   .tabla { width: 100%; border-collapse: collapse; background: var(--tarjeta); border-radius: 14px; overflow: hidden; }
@@ -256,21 +259,28 @@
 <section id="controles">
   <div class="contenedor">
     <h2>Controles</h2>
-    <p class="sub">Juega frente a la cámara con tu cuerpo, o con el teclado.</p>
+    <p class="sub">Antes de cada live eliges cómo pelear: frente a la cámara con tu cuerpo, o con el teclado.</p>
     <div class="tabla-scroll">
       <table class="tabla">
         <thead><tr><th>Acción</th><th>Teclado</th><th>Cámara (gesto)</th></tr></thead>
         <tbody>
           <tr><td>Defenderse</td><td><kbd>Shift</kbd> mantener</td><td>Mano delante de la cara, tapando la nariz</td></tr>
           <tr><td>Esquivar</td><td><kbd>A</kbd> / <kbd>D</kbd> mantener</td><td>Inclinar el cuerpo a un lado</td></tr>
-          <tr><td>Golpe recto</td><td><kbd>J</kbd></td><td>Puñetazo al frente</td></tr>
-          <tr><td>Gancho</td><td><kbd>K</kbd></td><td>Golpe lateral en arco</td></tr>
-          <tr><td>Uppercut</td><td><kbd>L</kbd></td><td>Puñetazo de abajo hacia arriba</td></tr>
+          <tr><td>Golpe recto</td><td><kbd>P</kbd></td><td>Puñetazo al frente</td></tr>
+          <tr><td>Gancho izquierdo</td><td><kbd>L</kbd></td><td>Golpe lateral en arco con la izquierda</td></tr>
+          <tr><td>Gancho derecho</td><td><kbd>Ñ</kbd></td><td>Golpe lateral en arco con la derecha</td></tr>
+          <tr><td>Uppercut</td><td><kbd>O</kbd></td><td>Puñetazo de abajo hacia arriba</td></tr>
           <tr><td>Patada</td><td><kbd>Espacio</kbd></td><td>Levantar la rodilla o el pie</td></tr>
           <tr><td>Ayuda</td><td><kbd>H</kbd></td><td>—</td></tr>
         </tbody>
       </table>
     </div>
+    <h3 class="titulo-guia">Guía de movimientos</h3>
+    <p class="sub">Cada gesto para la cámara, con su tecla equivalente.</p>
+    <figure class="guia">
+      <a href="img/guia_movimientos.jpg" target="_blank" rel="noopener"><img src="img/guia_movimientos.jpg" alt="Guía ilustrada de los 8 movimientos con su tecla: 1 defensa, mano delante de la cara (Shift); 2 esquiva izquierda, inclinarse a la izquierda (A); 3 esquiva derecha, inclinarse a la derecha (D); 4 recto, puñetazo al frente hacia la cámara (P); 5 gancho izquierdo, mano izquierda en arco hacia el centro (L); 6 gancho derecho, mano derecha en arco hacia el centro (Ñ); 7 uppercut, de la cintura al mentón (O); 8 patada, levantar la rodilla hasta la cintura (Espacio). Abajo, consejos: pararse a 1,5 a 2 metros con buena luz, un golpe por gesto, esquivar justo cuando el rival avisa y esquivar las patadas hacia el lado contrario." loading="lazy"></a>
+      <figcaption>Toca la imagen para verla en grande. Ponte a 1,5 - 2 m de la cámara, con buena luz y la cabeza y los hombros a la vista.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -340,6 +350,5 @@
   </div>
 </footer>
 
-  
 </body>
 </html>
